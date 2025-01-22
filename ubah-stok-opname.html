@@ -25,7 +25,7 @@
       <div class="mb-3">
         <div class="mb-3">
           <label class="form-label">NamaBarang</label>
-          <input type="date" class="form-control" id="input-namabarang">
+          <input type="text" class="form-control" id="input-namabarang">
         </div>
         <div class="mb-3">
           <label class="form-label">JumlahBarang</label>
@@ -36,12 +36,14 @@
           <input type="text" class="form-control" id="input-sisabarang">
         </div>
 
+        <button type="submit" class="btn btn-primary" id="tombol-ubah">Ubah</button>
     </form>
 
     <script type="module">
-      import { ambilStokOpname, ubahstokopname } from './main.js';
+      import {  ambilStokOpname, ubahstokopname } from './main.js';
 
-      let elemenNamaBarang = document.getElementById('tombol-namabarang');
+      let tombolUbah = document.getElementById('tombol-ubah');
+      let elemenNamaBarang = document.getElementById('input-namabarang');
       let elemenJumlahBarang = document.getElementById('input-jumlahbarang');
       let elemenSisaBarang = document.getElementById('input-sisabarang');
 
@@ -58,7 +60,7 @@
 
       tombolUbah.addEventListener('click', async function(el) {
         el.preventDefault();
-        await ubahstokopname(docId, elemennamabarang.value, elemenjumlahbarang.value, elemensisabarang.value,);
+        await ubahstokopname(docId, elemenNamaBarang.value, elemenJumlahBarang.value, elemenSisaBarang.value,);
         window.location.href = 'index.html';
       });
     </script>
