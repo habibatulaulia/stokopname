@@ -71,7 +71,7 @@
           '">ubah</a> ' +
           ' <button class="btn btn-danger tombol-hapus" data="' +
           data.id +
-          '">Hapus</button>' + '</td>' +
+          '">hapus</button>' + '</td>' +
           '</tr>'
         );
         nomor = nomor + 1;
@@ -79,10 +79,10 @@
 
       $('#loader').hide();
 
-      $('.tombol-hapus').click(async function() {
+      $('.tombol-hapusdaftarstokopname').click(async function() {
          $(this).attr('disabled', 'disabled');
         $('#' + $(this).attr('data')).show();
-        await hapusdaftarstokopname($(this).attr('data'));
+        await hapusDaftarStokOpname($(this).attr('data'));
         location.reload();
       });
       $('.link-ubah').click(async function() {
