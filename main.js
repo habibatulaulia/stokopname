@@ -60,7 +60,7 @@ export async function tambahStokOpname(namabarang, jumlahbarang, sisabarang) {
   }
 }
 
-export async function hapusDaftarStokOpname(docId, namabarang, jumlahbarang, sisabarang) {
+export async function ubahstokopname(docId, namabarang, jumlahbarang, sisabarang) {
   await updateDoc(doc(db, "stokopname", docId),{
     namabarang: namabarang,
     jumlahbarang: jumlahbarang,

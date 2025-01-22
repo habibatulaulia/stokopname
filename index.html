@@ -41,6 +41,7 @@
         <th scope="col">namabarang</th>
         <th scope="col">jumlahbarang</th>
         <th scope="col">sisabarang</th>
+        <th>
       </tr>
     </thead>
     <tbody>
@@ -52,7 +53,7 @@
   <a href="form-data-stokopname.html">stok opname</a>
 
   <script type="module">
-    import { ambilDaftarStokOpname, formatAngka, hapusDaftarStokOpname } from './main.js';
+    import { ambilDaftarStokOpname, formatAngka, ubahstokopname } from './main.js';
 
     $(document).ready(async function() {
       let elemenDaftar = $("#daftar> tbody");
@@ -79,7 +80,7 @@
 
       $('#loader').hide();
 
-      $('.tombol-hapusdaftarstokopname').click(async function() {
+      $('.tombol-hapus').click(async function() {
          $(this).attr('disabled', 'disabled');
         $('#' + $(this).attr('data')).show();
         await hapusDaftarStokOpname($(this).attr('data'));
